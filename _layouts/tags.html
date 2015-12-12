@@ -10,7 +10,7 @@ layout: default
 
 <h3 class="archive-title">Archive of tag {{ page_tag }}</h3>
 <div class="posts">
-    {% for post in page.posts reversed %}
+    {% for post in page.posts %}
     {% include post.html %}
     {% endfor %}
 </div>
