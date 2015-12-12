@@ -2,7 +2,13 @@
 layout: default
 ---
 
-<h3 class="archive-title">Archive of tag '{{ page.title }}'</h3>
+{% for tag in site.data.tags %}
+    {% if tag.slug == page.title %}
+        {% assign page_tag = tag.name %}
+    {% endif %}
+{% endfor %}
+
+<h3 class="archive-title">Archive of tag {{ page_tag }}</h3>
 <div class="posts">
     {% for post in page.posts reversed %}
     {% include post.html %}

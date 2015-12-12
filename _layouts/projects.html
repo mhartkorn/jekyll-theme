@@ -2,9 +2,15 @@
 layout: default
 ---
 
-<h3 class="archive-title">Archive of project '{{ page.title }}'</h3>
+{% for project in site.data.projects %}
+    {% if project.slug == page.title %}
+        {% assign page_project = project.name %}
+    {% endif %}
+{% endfor %}
+
+<h3 class="archive-title">Archive of project {{ page_project }}</h3>
 <div class="posts">
-    {% for post in page.posts reversed %}
+    {% for post in page.posts %}
     {% include post.html %}
     {% endfor %}
 </div>
