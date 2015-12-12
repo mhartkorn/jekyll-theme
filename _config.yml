@@ -1,15 +1,17 @@
 # Permalinks
 #
 # Use of `relative_permalinks` ensures post links from the index work properly.
-permalink:           pretty
-relative_permalinks: true
+permalink:           '/:year/:month/:title.html'
+relative_permalinks: false
 
 # Setup
-title:               Poole
-tagline:             The Jekyll Butler
-url:                 http://getpoole.com
-paginate:            1
-baseurl:             ""
+title:               'Blog title'
+tagline:             'Subtitle'
+url:                 'http://example.com'
+paginate:            3
+paginate_path:       '/page/:num/'
+baseurl:             ''
+excerpt_separator:   '<!--more-->'
 
 # Assets
 #
@@ -17,14 +19,16 @@ baseurl:             ""
 sass:
   sass_dir:          _sass
   style:            :compressed
+  
+gems:
+- jekyll-paginate
+- jekyll-archives
 
-# About/contact
-author:
-  name:              Mark Otto
-  url:               https://twitter.com/mdo
-  email:             markdotto@gmail.com
-
-# Custom vars
-version:             2.0.0
-github:
-  repo:              https://github.com/poole/poole
+jekyll-archives:
+  enabled:           [tags, categories]
+  layouts:
+    tag:             'tags'
+    category:        'projects'
+  permalinks:
+    tag:             '/tag/:name/'
+    category:        '/project/:name/'

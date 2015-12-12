@@ -21,10 +21,18 @@
 
 // Meta data line below post title
 .post-date {
-  display: block;
+  display: inline;
+  color: #9a9a9a;
+}
+
+.post-project-tags {
+  display: inline;
+  color: #9a9a9a;
+}
+
+.post-meta {
   margin-top: -.5rem;
   margin-bottom: 1rem;
-  color: #9a9a9a;
 }
 
 
@@ -57,5 +65,22 @@
         color: inherit;
       }
     }
+  }
+}
+
+.label {
+  display: inline;
+  padding: .3em .6em;
+  font-size: 80%;
+  font-weight: bold;
+  line-height: 1;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: .25em;
+
+  > a {
+    color: #fff;
   }
 }

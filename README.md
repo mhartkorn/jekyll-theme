@@ -1,5 +1,3 @@
-# Poole
-
 ## Usage
 
 ### 1. Install dependencies
@@ -7,7 +5,7 @@
 Poole is built on Jekyll and uses its built-in SCSS compiler to generate our CSS. Before getting started, you'll need to install the Jekyll gem:
 
 ```bash
-$ gem install jekyll
+$ gem install jekyll jekyll-paginate jekyll-archives
 ```
 
 **Windows users:** Windows users have a bit more work to do, but luckily [@juthilo](https://github.com/juthilo) has your back with his [Run Jekyll on Windows](https://github.com/juthilo/run-jekyll-on-windows) guide.
@@ -35,8 +33,7 @@ Open <http://localhost:4000> in your browser, and voilà.
 
 ## Original Code
 
-**Poole by Mark Otto**
-- <https://github.com/poole/poole>
+Poole by Mark Otto: <https://github.com/poole/poole>
 
 
 ## License
