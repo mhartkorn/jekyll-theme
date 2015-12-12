@@ -1,0 +1,25 @@
+<article class="post">
+    <h1 class="post-title">
+        <a href="{{ site.baseurl }}{{ post.url }}">
+            {{ post.title }}
+        </a>
+    </h1>
+
+    <div class="post-meta">
+        <time datetime="{{ post.date | date_to_xmlschema }}" class="post-date">{{ post.date | date_to_string }}</time>
+        {% include post_meta.html %}
+    </div>
+
+    {{ post.excerpt }}
+
+    {% capture content_words %}
+    {{ post.content | number_of_words }}
+    {% endcapture %}
+    {% capture excerpt_words %}
+    {{ post.excerpt | number_of_words }}
+    {% endcapture %}
+    {% if excerpt_words != content_words %}
+    <a href="{{ site.baseurl }}{{ post.url }}">Read more...</a>
+    {% endif %}
+
+</article>
