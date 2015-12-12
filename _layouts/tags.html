@@ -8,7 +8,7 @@ layout: default
     {% endif %}
 {% endfor %}
 
-<h3 class="archive-title">Archive of tag {{ page_tag }}</h3>
+<h3 class="archive-title">Archive of tag <span class="post-tag">{{ page_tag }}</span></h3>
 <div class="posts">
     {% for post in page.posts %}
     {% include post.html %}
